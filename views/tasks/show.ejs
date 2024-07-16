@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= task.name %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1><%= task.name %></h1>
+    <% if (task.isReadyToEat) { %>
+        <p>This task is complete!</p>
+      <% } else { %>
+        <p>This task is not complete yet!</p>
+      <% } %>
+      <form action="/tasks/<%=task._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= task.name %></button>
+      </form>
+      <a href="/tasks/<%= task._id %>/edit">Edit <%= task.name %></a>
+      <a href="/tasks">Back to Tasks</a>
+  </body>
+</html>

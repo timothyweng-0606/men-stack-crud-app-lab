@@ -1,0 +1,19 @@
+
+<link rel="stylesheet" href="/stylesheets/style.css" />
+<body>
+    <!-- update the header -->
+    <h1>Edit <%= task.name %></h1>
+    <form action="/tasks/<%=task._id%>?_method=PUT" method="POST">
+      <label for="name">Task:</label>
+      <input type="text" name="name" value="<%= task.name %>" />
+
+      <label for="isComplete">Complete?</label>
+      <input type="checkbox" name="isComplete" id="isComplete" />
+      <!-- update the button text -->
+      <button type="submit">Update task</button>
+    </form>
+    <a class="tasks-index-link" href="/tasks">
+        <div class="index-link-text">Back to Tasks</div>
+      </a>
+  </body>
+  

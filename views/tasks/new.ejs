@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Task</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+    <body>
+        <h1>Create a New Task!</h1>
+        <a href="/tasks/">Back to Tasks</a>
+        <!-- the action attribute specifies the URL where the form data should be sent when the form is submitted,
+         POST create new data on the server -->
+        <form action="/tasks" method="POST">
+            <label for="name">Task:</label>
+            <input type="text" name="name" id="name" />
+            <label for="isComplete">Complete?</label>
+            <input type="checkbox" name="isComplete" id="isComplete" />
+      <button type="submit">Add Task</button>
+    </form>
+  </body>
+</html>
